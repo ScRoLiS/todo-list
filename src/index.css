@@ -3,7 +3,7 @@ body {
     font-size: 14px;
 
     background-image: url("./resources/bg.jpg");
-    background-size: cover;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-color: #34186f;
 }
