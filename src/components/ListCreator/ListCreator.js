@@ -1,28 +1,27 @@
 import React from 'react';
-import './ListCreator.css';
 
 import Button from '../Button';
 import Input from '../Input';
 import Icon from '../Icon';
+import withInput from '../../hoc/withInput';
+import './ListCreator.css';
 
-function ListCreator() {
+function ListCreator({ action, onChange, placeholder, value }) {
+
+
   return (
     <div className="list-creator">
-      <Button
-        className="list-creator__button list-creator--left"
-      >
+      <Button className="list-creator__button list-creator--left">
         <Icon iconName="list" />
       </Button>
 
-      <Input placeholder="Новый список" />
+      <Input action={action} onChange={onChange} placeholder={placeholder} value={value} />
 
-      <Button
-        className="list-creator__button list-creator--right"
-      >
+      <Button onClick={action} className="list-creator__button list-creator--right">
         <Icon iconName="add-circle" />
       </Button>
     </div>
   );
 }
 
-export default ListCreator;
+export default withInput(ListCreator);
