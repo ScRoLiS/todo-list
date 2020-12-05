@@ -1,0 +1,13 @@
+.icon {
+    width: 25px;
+}
+
+.icon--white {
+    color: white;
+    fill: white;
+}
+
+.icon--purple {
+    color: #421C8D;
+    fill: #421C8D;
+}

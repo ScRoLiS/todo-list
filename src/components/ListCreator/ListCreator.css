@@ -1,0 +1,16 @@
+.list-creator {
+    display: flex;
+}
+
+.list-creator__button {
+    padding: 5px;
+    width: 35px;
+}
+
+.list-creator--left {
+    border-radius: 5px 0px 0px 0px;
+}
+
+.list-creator--right {
+    border-radius: 0px 5px 0px 0px;
+}

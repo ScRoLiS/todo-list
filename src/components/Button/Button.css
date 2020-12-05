@@ -1,0 +1,20 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #9E6EFF;
+}
+
+.button:hover {
+    background-color: #ac83fd;
+}
+
+.button--icon {
+    width: 35px;
+    padding: 5px;
+}
