@@ -1,8 +1,10 @@
 .list-creator {
     display: flex;
+    position: relative;
 }
 
 .list-creator__button {
+    fill: #fff;
     padding: 5px;
     width: 35px;
 }

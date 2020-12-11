@@ -1,0 +1,29 @@
+.icon-picker {
+    display: flex;
+    position: absolute;
+    gap: 3px;
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+    top: -50px;
+    left: -5px;
+    list-style: none;
+    background-color: #fff;
+}
+
+.icon-picker__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icon-picker__item:hover {
+    background-color: #9E6EFF;
+}
+
+.icon-picker__item:hover .icon-picker__icon {
+    color: #fff;
+    fill: #fff;
+}
