@@ -9,6 +9,10 @@
     width: 35px;
 }
 
+.list-creator__icon {
+    width: 100%;
+}
+
 .list-creator--left {
     border-radius: 5px 0px 0px 0px;
 }

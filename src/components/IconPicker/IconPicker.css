@@ -11,6 +11,10 @@
     background-color: #fff;
 }
 
+.icon-picker__icon {
+    width: 25px;
+}
+
 .icon-picker__item {
     display: flex;
     justify-content: center;

@@ -27,13 +27,13 @@ function ListCreator({ action, value = '', onChange, placeholder }) {
   return (
     <div className="list-creator">
       <Button onClick={switchPicker} className="list-creator__button list-creator--left">
-        <Icon iconName={icon} />
+        <Icon className="list-creator__icon" iconName={icon} />
       </Button>
 
       <Input action={createList} onChange={onChange} placeholder={placeholder} value={value} />
 
       <Button onClick={createList} className="list-creator__button list-creator--right">
-        <Icon iconName="add-circle" />
+        <Icon className="list-creator__icon" iconName="add-circle" />
       </Button>
 
       {
