@@ -39,6 +39,19 @@ export default class Todo {
 		return [...data, list];
 	}
 
+	static addTodo(data, todo) {
+		const todoList = [...data.todos, todo];
+		return { ...data, todos: todoList };
+	}
+
+	static insertTodo(data, id, todo) {
+		return data.map((item) => {
+			if (item.id === id) {
+				return { ...todo };
+			} else return item;
+		});
+	}
+
 	static removeList(data, id) {
 		return data.filter(item => item.id !== id);
 	}
