@@ -16,6 +16,7 @@
 }
 
 .list__empty {
+  user-select: none;
   color: #330b83;
   text-transform: uppercase;
   font-size: 16px;
@@ -38,6 +39,10 @@
   background-color: #5E35B1;
   padding: 10px;
   border-radius: 5px;
+}
+
+.list__item:hover {
+  background-color: #6836cc;
 }
 
 .list__controls {
@@ -82,10 +87,16 @@
 
 .list__name {
   word-wrap: break-word;
+  user-select: none;
 }
 
 .list__control-icon {
   width: 100%;
   fill: #411991;
   color: #411991;
+}
+
+.list--todo {
+  width: 60%;
+  gap: 5px;
 }

@@ -1,0 +1,17 @@
+.todo-creator {
+  display: flex;
+  gap: 5px;
+}
+
+.todo-creator__create {
+  display: flex;
+  width: 100%;
+}
+
+.todo-creator--left {
+  border-radius: 5px 0 0 5px;
+}
+
+.todo-creator--right {
+  border-radius: 0 5px 5px 0;
+}
