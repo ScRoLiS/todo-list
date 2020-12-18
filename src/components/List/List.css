@@ -37,12 +37,20 @@
   align-items: center;
   color: #fff;
   background-color: #5E35B1;
-  padding: 10px;
+  padding: 7px;
   border-radius: 5px;
 }
 
 .list__item:hover {
   background-color: #6836cc;
+}
+
+.list__item--selected {
+  background-color: #7f4ae9;
+}
+
+.list__item--selected:hover {
+  background-color: #7f4ae9;
 }
 
 .list__controls {
@@ -54,8 +62,8 @@
 .list__control {
   display: block;
   padding: 3px;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 5px;
   border: 0;
   outline: none;
