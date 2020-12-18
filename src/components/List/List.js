@@ -4,8 +4,16 @@ import './List.css';
 import ListCreator from '../ListCreator';
 import ListItem from './ListItem';
 
-function List({ data, createList, remove }) {
-  console.log(data);
+function List({ data, currentList, createList, selectList, remove }) {
+
+  const select = (id) => {
+    selectList(id);
+  }
+
+  const isSelected = (item) => {
+    return currentList && item.id === currentList.id ? 'list__item--selected' : null;
+  };
+
   return (
     <div className="list">
       <ListCreator placeholder="Новый список" action={createList} />
@@ -14,7 +22,17 @@ function List({ data, createList, remove }) {
           ? <ul className="list__item-wrapper">
             {
               data.map(item => {
-                return <ListItem key={item.id} id={item.id} icon={item.icon} name={item.name} remove={remove} />
+                return (
+                  <ListItem
+                    className={isSelected(item)}
+                    select={select}
+                    key={item.id}
+                    id={item.id}
+                    icon={item.icon}
+                    name={item.name}
+                    remove={remove}
+                  />
+                )
               })
             }
           </ul>

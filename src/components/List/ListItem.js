@@ -1,17 +1,23 @@
 import React from 'react';
+import classNames from 'classnames';
 import ListItemControl from './ListItemControl';
 import Icon from '../Icon';
 
-function ListItem({id, icon, name, remove}) {
+function ListItem({ className, id, icon, name, select, remove }) {
 
-  const removeItem = () => {
+  const removeItem = (e) => {
+    e.stopPropagation();
     remove(id);
   };
 
+  const selectItem = (e) => {
+    select(id);
+  }
+
   return (
-    <li className="list__item">
+    <li className={classNames('list__item', className)} onClick={selectItem}>
       <Icon className="list__icon" iconName={icon} />
-      <span className="list__name">{ name }</span>
+      <span className="list__name">{name}</span>
       <div className="list__controls">
         <ListItemControl type="remove" action={removeItem} />
       </div>
