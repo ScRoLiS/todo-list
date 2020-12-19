@@ -4,7 +4,7 @@ import ListTodoItem from './ListTodoItem';
 
 import './List.css';
 
-function ListTodo({ currentList, createTodo, editTodo }) {
+function ListTodo({ currentList, createTodo, editTodo, removeTodo }) {
   return (
     <div className="list list--todo">
       <TodoCreator action={createTodo} placeholder="Новая задача" />
@@ -18,7 +18,8 @@ function ListTodo({ currentList, createTodo, editTodo }) {
                 name={item.name}
                 done={item.done}
                 important={item.important}
-                editTodo={editTodo} />
+                editTodo={editTodo}
+                removeTodo={removeTodo} />
             }
             )}
           </ul>

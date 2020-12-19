@@ -2,9 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import ListItemControl from './ListItemControl';
 
-function ListTodoItem({ className, id, name, done, important, editTodo }) {
+function ListTodoItem({ className, id, name, done, important, editTodo, removeTodo }) {
   const removeItem = (e) => {
     e.stopPropagation();
+    removeTodo(id);
   };
 
   const switchImportant = () => {
@@ -20,7 +21,7 @@ function ListTodoItem({ className, id, name, done, important, editTodo }) {
       <div className="list__controls">
         <ListItemControl type="edit" />
         <ListItemControl type="important" action={switchImportant} />
-        <ListItemControl type="remove" />
+        <ListItemControl type="remove" action={removeItem} />
       </div>
     </li>
   );

@@ -12,8 +12,11 @@ export default class Todo {
 		]),
 		Todo.newList(this.rnd(), 'star', 'Second List', [
 			Todo.newTodo(this.rnd(), '2.1 Todo', false, false),
-			Todo.newTodo(this.rnd(), '2.2 Todo', false, false),
+			Todo.newTodo(this.rnd(), '2.2 Todo', false, true),
 			Todo.newTodo(this.rnd(), '2.3 Todo', false, false),
+			Todo.newTodo(this.rnd(), '2.4 Todo', false, false),
+			Todo.newTodo(this.rnd(), '2.5 Todo', false, true),
+			Todo.newTodo(this.rnd(), '2.6 Todo', false, false),
 		]),
 		Todo.newList(this.rnd(), 'cash', 'Third List', [
 			Todo.newTodo(this.rnd(), '3.1 Todo', false, false),
@@ -50,6 +53,10 @@ export default class Todo {
 				return { ...todo };
 			} else return item;
 		});
+	}
+
+	static removeTodo(list, id) {
+		return { ...list, todos: list.todos.filter(item => item.id !== id) };
 	}
 
 	static removeList(data, id) {

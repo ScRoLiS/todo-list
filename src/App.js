@@ -19,6 +19,12 @@ function App() {
     setList(newTodo);
   }
 
+  const removeTodo = (id) => {
+    const newList = Todo.removeTodo(currentList, id);
+    setList(newList);
+    setData(Todo.replaceList(data, newList));
+  }
+
   const removeList = (id) => {
     if (currentList != null && currentList.id === id)
       setList(null);
@@ -39,7 +45,7 @@ function App() {
   return (
     <div className="app">
       <List data={data} createList={createList} currentList={currentList} selectList={selectList} remove={removeList} />
-      { currentList ? <ListTodo currentList={currentList.todos} createTodo={createTodo} editTodo={editTodo} /> : null}
+      { currentList ? <ListTodo currentList={currentList.todos} createTodo={createTodo} editTodo={editTodo} removeTodo={removeTodo} /> : null}
     </div>
   );
 }
