@@ -33,12 +33,13 @@
 
 .list__item {
   display: flex;
-  gap: 5px;
   align-items: center;
-  color: #fff;
-  background-color: #5E35B1;
+  gap: 5px;
   padding: 7px;
   border-radius: 5px;
+  min-height: 37px;
+  color: #fff;
+  background-color: #5e35b1;
 }
 
 .list__item:hover {
@@ -70,7 +71,7 @@
 }
 
 .list__control--remove {
-  background-color: #FF04E6;
+  background-color: #ff04e6;
 }
 
 .list__control--remove:hover {
@@ -78,7 +79,7 @@
 }
 
 .list__control--edit {
-  background-color: #79F19A;
+  background-color: #79f19a;
 }
 
 .list__control--edit:hover {
@@ -86,7 +87,7 @@
 }
 
 .list__control--important {
-  background-color: #FFD25F;
+  background-color: #ffd25f;
 }
 
 .list__control--important:hover {
@@ -94,7 +95,10 @@
 }
 
 .list__name {
+  width: 100%;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
   user-select: none;
 }
 
@@ -107,4 +111,19 @@
 .list--todo {
   width: 60%;
   gap: 5px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.list--todo .list__item-wrapper {
+  background-color: transparent;
+  padding: 0;
+}
+
+.list--todo .list__item {
+  background-color: #421c8d;
+}
+
+.list--todo .list__item--important {
+  background-color: #f49883;
 }
