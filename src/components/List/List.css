@@ -102,6 +102,10 @@
   user-select: none;
 }
 
+.list__name--done {
+  text-decoration: line-through;
+}
+
 .list__control-icon {
   width: 100%;
   fill: #411991;
@@ -124,6 +128,14 @@
   background-color: #421c8d;
 }
 
+.list--todo .list__item:hover {
+  background-color: #4f20ad;
+}
+
 .list--todo .list__item--important {
+  background-color: #f49883;
+}
+
+.list--todo .list__item--important:hover {
   background-color: #f49883;
 }

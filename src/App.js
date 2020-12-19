@@ -42,6 +42,10 @@ function App() {
     setList(newList);
   };
 
+  const update = () => {
+    
+  }
+
   return (
     <div className="app">
       <List data={data} createList={createList} currentList={currentList} selectList={selectList} remove={removeList} />
