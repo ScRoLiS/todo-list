@@ -62,4 +62,13 @@ export default class Todo {
 				return data[i];
 		}
 	}
+
+	static replaceList(data, list) {
+		return data.map(item => item.id === list.id ? list : item);
+	}
+
+	static editTodo(list, id, name, done, important) {
+		const newTodo = { ...list, todos: list.todos.map(item => item.id === id ? Todo.newTodo(id, name, done, important) : item) };
+		return newTodo;
+	}
 }
